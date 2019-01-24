@@ -12,17 +12,7 @@ const functions = {
   fetchUser: () => fetch('https://jsonplaceholder.typicode.com/users/1')
     .then(res => res.json())
     .then(data => data)
-    .catch(err => 'error')
-  
+    .catch(err => console.log(err))
 }
-
-function fetchUser() { 
-  fetch('https://jsonplaceholder.typicode.com/users/1')
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => 'error')
-}
-
-fetchUser();
 
 module.exports = functions;
